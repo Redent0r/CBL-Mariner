@@ -3,7 +3,7 @@
 Summary:        Rake-based Ruby C Extension task generator
 Name:           rubygem-%{gem_name}
 Version:        1.2.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        MIT
 Vendor:         Microsoft Corporation
 Distribution:   Azure Linux
@@ -89,6 +89,7 @@ popd
 
 %files
 %{_bindir}/rake-compiler
+%{_bindir}/rake-compiler.lock
 %license %{gem_instdir}/LICENSE.txt
 %dir %{gem_instdir}
 %doc %{gem_instdir}/README.md
@@ -101,6 +102,9 @@ popd
 %{gem_docdir}
 
 %changelog
+* Thu Nov 18 2024 Saul Paredes <saulparedes@microsoft.com> - 13.0.6-7
+- Upgrade ruby to 3.3.5
+
 * Thu Nov 02 2023 CBL-Mariner Servicing Account <cblmargh@microsoft.com> - 1.2.5-1
 - Auto-upgrade to 1.2.5 - Azure Linux 3.0 - package upgrades
 

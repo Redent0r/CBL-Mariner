@@ -3,7 +3,7 @@
 Summary:        Fluentd event collector
 Name:           rubygem-%{gem_name}
 Version:        1.16.2
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        ASL 2.0
 Vendor:         Microsoft Corporation
 Distribution:   Azure Linux
@@ -53,12 +53,25 @@ gem install -V --local --force --install-dir %{buildroot}%{gemdir} --bindir %{bu
 %{_bindir}/fluent-plugin-config-format
 %{_bindir}/fluent-plugin-generate
 %{_bindir}/fluentd
+%{_bindir}/fluent-binlog-reader.lock
+%{_bindir}/fluent-ca-generate.lock
+%{_bindir}/fluent-cap-ctl.lock
+%{_bindir}/fluent-cat.lock
+%{_bindir}/fluent-ctl.lock
+%{_bindir}/fluent-debug.lock
+%{_bindir}/fluent-gem.lock
+%{_bindir}/fluent-plugin-config-format.lock
+%{_bindir}/fluent-plugin-generate.lock
+%{_bindir}/fluentd.lock
 %{gemdir}
 %doc %{gemdir}/doc/fluentd-%{version}
 %{gemdir}/cache/fluentd-%{version}.gem
 %{gemdir}/specifications/fluentd-%{version}.gemspec
 
 %changelog
+* Thu Nov 18 2024 Saul Paredes <saulparedes@microsoft.com> - 1.16.2-4
+- Upgrade ruby to 3.3.5
+
 * Wed Apr 23 2024 Andrew Phelps <anphel@microsoft.com> - 1.16.2-3
 - Modify `rubygem-sigdump` runtime version requirement
 

@@ -4,7 +4,7 @@
 Summary:        Manual authoring tool
 Name:           rubygem-%{gem_name}
 Version:        0.7.3
-Release:        18%{?dist}
+Release:        19%{?dist}
 License:        MIT
 Vendor:         Microsoft Corporation
 Distribution:   Azure Linux
@@ -64,6 +64,7 @@ rm -rf %{buildroot}%{gem_instdir}/{INSTALLING,Rakefile,test,man,ronn.gemspec,con
 %{gem_cache}
 %{gem_spec}
 %{_bindir}/%{gem_name}
+%{_bindir}/%{gem_name}.lock
 %{_mandir}/man1/%{gem_name}.1*
 %{_mandir}/man7/%{gem_name}-format.7*
 
@@ -71,6 +72,9 @@ rm -rf %{buildroot}%{gem_instdir}/{INSTALLING,Rakefile,test,man,ronn.gemspec,con
 %{gem_docdir}
 
 %changelog
+* Thu Nov 18 2024 Saul Paredes <saulparedes@microsoft.com> - 0.7.3-19
+- Upgrade ruby to 3.3.5
+
 * Wed Sep 28 2022 Suresh Babu Chalamalasetty <schalam@microsoft.com> - 0.7.3-18
 - Cleanup SPEC file and move to SPECS directory from Extended.
 

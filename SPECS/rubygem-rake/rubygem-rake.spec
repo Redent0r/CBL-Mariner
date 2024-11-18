@@ -2,7 +2,7 @@
 Summary:        Rake is a Make-like program implemented in Ruby
 Name:           rubygem-%{gem_name}
 Version:        13.0.6
-Release:        6%{?dist}
+Release:        7%{?dist}
 License:        MIT
 Vendor:         Microsoft Corporation
 Distribution:   Azure Linux
@@ -70,6 +70,7 @@ popd
 %{gem_spec}
 %{_mandir}/man1/*
 %{_bindir}/rake
+%{_bindir}/rake.lock
 %exclude %{gem_instdir}/.*
 %exclude %{gem_instdir}/rake.gemspec
 
@@ -79,6 +80,9 @@ popd
 %doc %{gem_instdir}/*.rdoc
 
 %changelog
+* Thu Nov 18 2024 Saul Paredes <saulparedes@microsoft.com> - 13.0.6-7
+- Upgrade ruby to 3.3.5
+
 * Mon Oct 24 2022 Pawel Winogrodzki <pawelwi@microsoft.com> - 13.0.6-6
 - Adding 'Obsoletes: ruby <= 3.1.2-2'.
 

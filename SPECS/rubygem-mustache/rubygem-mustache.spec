@@ -2,7 +2,7 @@
 Summary:        Mustache is a framework-agnostic way to render logic-free views
 Name:           rubygem-%{gem_name}
 Version:        1.1.1
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        MIT
 Vendor:         Microsoft Corporation
 Distribution:   Azure Linux
@@ -83,6 +83,7 @@ popd
 %dir %{gem_instdir}
 %doc *.html
 %{_bindir}/mustache
+%{_bindir}/mustache.lock
 %license %{gem_instdir}/LICENSE
 %{gem_instdir}/bin
 %{gem_libdir}
@@ -99,6 +100,9 @@ popd
 %{gem_instdir}/test
 
 %changelog
+* Thu Nov 18 2024 Saul Paredes <saulparedes@microsoft.com> - 1.1.1-5
+- Upgrade ruby to 3.3.5
+
 * Wed Sep 28 2022 Suresh Babu Chalamalasetty <schalam@microsoft.com> - 1.1.1-4
 - Cleanup SPEC file and move to SPECS directory from Extended.
 

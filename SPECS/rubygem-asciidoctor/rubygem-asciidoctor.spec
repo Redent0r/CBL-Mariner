@@ -3,7 +3,7 @@
 Summary:        A fast, open source AsciiDoc implementation in Ruby
 Name:           rubygem-%{gem_name}
 Version:        2.0.20
-Release:        1%{?dist}
+Release:        2%{?dist}
 Group:          Development/Languages
 License:        MIT
 Vendor:         Microsoft Corporation
@@ -46,6 +46,7 @@ gem install -V --local --force --install-dir %{buildroot}/%{gemdir} --bindir %{b
 %{gem_libdir}
 %{gem_spec}
 %{_bindir}/asciidoctor
+%{_bindir}/asciidoctor.lock
 %{gem_instdir}/bin
 %{gem_instdir}/man/asciidoctor.*
 %exclude %{gem_cache}
@@ -55,6 +56,9 @@ gem install -V --local --force --install-dir %{buildroot}/%{gemdir} --bindir %{b
 %doc %{gem_docdir}
 
 %changelog
+* Thu Nov 18 2024 Saul Paredes <saulparedes@microsoft.com> - 2.0.20-2
+- Upgrade ruby to 3.3.5
+
 * Thu Nov 02 2023 CBL-Mariner Servicing Account <cblmargh@microsoft.com> - 2.0.20-1
 - Auto-upgrade to 2.0.20 - Azure Linux 3.0 - package upgrades
 
