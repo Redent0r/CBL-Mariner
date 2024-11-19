@@ -102,7 +102,9 @@ Source5:        rubygems.prov
 Source6:        rubygems.req
 Source7:        macros.rubygems
 Patch0:         CVE-2024-49761.patch
-# Updates default ruby-uri to 0.12.2 and vendored one to 0.10.3. Remove once ruby gets updated to a version that comes with both lib/uri/version.rb and lib/bundler/vendor/uri/lib/uri/version.rb versions >= 0.12.2 or == 0.10.3
+# patch taken from https://src.fedoraproject.org/rpms/ruby/c/b7e197fb887200e4faaf8fae663a9df00bdc09d3?branch=rawhide 
+# to remove the lock file for binstubs
+Patch1:         Remove-the-lock-file-for-binstubs.patch
 BuildRequires:  openssl-devel
 # Pkgconfig(yaml-0.1) is needed to build the 'psych' gem.
 BuildRequires:  pkgconfig(yaml-0.1)
